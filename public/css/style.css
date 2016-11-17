@@ -1,0 +1,19 @@
+footer {
+    padding: 20px 0 10px;
+    border-top: 1px solid #eee;
+    margin-top: 18px;
+}
+.well-form {
+    padding-bottom: 0;
+    margin-bottom: 80px;
+}
+.content-item {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.content-item:last-child {
+    border-bottom: none;
+}
+.post-content img {
+    max-width: 100%;
+}

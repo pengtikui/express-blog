@@ -1,0 +1,24 @@
+<%- include header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h1><%= post.title %></h1>
+            <p class="text-muted">
+                <span class="glyphicon glyphicon-user"></span>
+                <a href="/posts?author=<%= post.author._id %>"><%= post.author.name %></a>
+                <span class="glyphicon glyphicon-time"></span>
+                <%= post.created_at %>
+                <% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { -%>
+                    |
+                    <a href="/posts/<%= post._id %>/edit">编辑</a>
+                    <a href="/posts/<%= post._id %>/remove">删除</a>
+                <% } %>
+            </p>
+            <hr>
+            <div class="post-content"><%- post.content %></div>
+        </div>
+    </div>
+</div>
+
+<%- include footer %>

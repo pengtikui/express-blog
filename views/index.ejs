@@ -1,0 +1,14 @@
+<%- include header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <%- include alert %>
+            <% posts.forEach(function (post) { %>
+            <div class="content-item">
+                <h2><a href="/posts/<%= post._id %>"><%= post.title %></a></h2>
+                <p class="text-muted"><span class="glyphicon glyphicon-user"></span> <a href="/posts?author=<%= post.author._id %>"><%= post.author.name %></a> <span class="glyphicon glyphicon-time"></span> <%= post.created_at %></p>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+<%- include footer %>
